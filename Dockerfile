@@ -35,5 +35,8 @@ USER jenkins
 
 RUN mkdir /home/jenkins/.tmp
 RUN ssh-keygen -q -t rsa -N '' -f /home/jenkins/.ssh/id_rsa
+RUN touch /home/jenkins/.ssh/known_hosts
+RUN echo '1|RF7sz8j4g7eE3uN7Q1IJGluu14E=|nx1VqLW+XQ04U3zvnHk9Woc6S4g= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA03KF6OTPkOjnKujD9yZq25eEroNrrKJlBSZIqr0jc1fz8sE+bTFCcNK6FCCR/SuoKBKgLO0z4DKBKDvnie5+8Z/YFqw5WOA0f/Xpbjv7hFjGrBtQnNfy9L8rnnzQ2q5DKxHmgvVb7ReJPR3coPlLUceUu8iPMlpU/4C7A0Z5Qu7HgkPT0hna1rFeQ6oofoLefZ8Nwacai/Fkbq9r4rah4lHs3HDpNxbHZ1A+pmBejXEt/12FfbzsnGzpp4L6cY61NnW1UGtVqSqLxh6b3bIh1dz+UZB1PiYVX5g4TiVPPLLn7TC0BWjCuf+P8f/Or9t+WT7E0+/jhDlZZnJyZ35TWQ==
+|1|42N9d8pWFRjopjP82EodggTUuVg=|4KLg+GRnzlYOUGzp0LuDj7FJQrw= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA03KF6OTPkOjnKujD9yZq25eEroNrrKJlBSZIqr0jc1fz8sE+bTFCcNK6FCCR/SuoKBKgLO0z4DKBKDvnie5+8Z/YFqw5WOA0f/Xpbjv7hFjGrBtQnNfy9L8rnnzQ2q5DKxHmgvVb7ReJPR3coPlLUceUu8iPMlpU/4C7A0Z5Qu7HgkPT0hna1rFeQ6oofoLefZ8Nwacai/Fkbq9r4rah4lHs3HDpNxbHZ1A+pmBejXEt/12FfbzsnGzpp4L6cY61NnW1UGtVqSqLxh6b3bIh1dz+UZB1PiYVX5g4TiVPPLLn7TC0BWjCuf+P8f/Or9t+WT7E0+/jhDlZZnJyZ35TWQ==' > /home/jenkins/.ssh/known_hosts
 
 VOLUME ["/home/jenkins"]
