@@ -34,5 +34,6 @@ WORKDIR $HOME
 USER jenkins
 
 RUN mkdir /home/jenkins/.tmp
+RUN ssh-keygen -q -t rsa -N '' -f /home/jenkins/.ssh/id_rsa
 
 VOLUME ["/home/jenkins"]
